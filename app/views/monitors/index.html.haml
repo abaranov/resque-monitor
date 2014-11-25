@@ -1,0 +1,49 @@
+- @resque_data.each do |host|
+  - host.each do |name, data|
+    .row
+      %h3= host_name(name)
+      .queues_table.span4
+        %h4 Queues
+        %table.table.table-striped.table-hover.table-condensed.table-bordered
+          %thead
+            %tr
+              %th Name
+              %th Jobs
+
+          %tbody
+            - data[:queues].each do |queue|
+              %tr
+                %td= queue[0]
+                %td= queue[1]
+
+
+
+      .workers_table.span8
+        %h4= data[:workers_title]
+        %table.table.table-striped.table-hover.table-condensed.table-bordered
+          %thead
+            %tr
+              %th Where
+              %th Queue
+              %th Processing
+              %th
+
+          %tbody
+            - if data[:workers].blank?
+              %tr
+                %td Nothing is happening right now...
+                %td
+                %td
+                %td
+            - else
+              - data[:workers].each do |worker|
+                %tr
+                  %td= worker[0]
+                  %td= worker[1]
+                  %td= worker[2]
+                  %td
+                    - time = Time.parse(worker[3])
+                    - if Time.now.utc - time < 60
+                      Just Now
+                    - else
+                      = time

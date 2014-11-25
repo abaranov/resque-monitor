@@ -1,0 +1,57 @@
+<%
+modules_list = <<-MODULES_LIST
+# Core (no need to include these directly)
+# jquery.ui.core
+# jquery.ui.widget
+# jquery.ui.mouse
+# jquery.ui.position
+#
+# Interactions
+# jquery.ui.draggable
+jquery.ui.droppable
+# jquery.ui.resizable
+# jquery.ui.selectable
+jquery.ui.sortable
+#
+# Widgets
+# jquery.ui.accordion
+# jquery.ui.autocomplete
+# jquery.ui.button
+# jquery.ui.datepicker
+# jquery.ui.dialog
+# jquery.ui.menu
+# jquery.ui.progressbar
+# jquery.ui.slider
+# jquery.ui.spinner
+# jquery.ui.tabs
+# jquery.ui.tooltip
+#
+# I18n
+# jquery.ui.datepicker
+# jquery.ui.datepicker-pt-BR
+#
+# Effects
+# jquery.ui.effect.all
+jquery.ui.effect
+# jquery.ui.effect-blind
+# jquery.ui.effect-bounce
+# jquery.ui.effect-clip
+# jquery.ui.effect-drop
+# jquery.ui.effect-explode
+# jquery.ui.effect-fade
+# jquery.ui.effect-fold
+jquery.ui.effect-highlight
+# jquery.ui.effect-pulsate
+# jquery.ui.effect-scale
+# jquery.ui.effect-shake
+# jquery.ui.effect-slide
+# jquery.ui.effect-transfer
+MODULES_LIST
+.split("\n")
+
+modules_list.reject! { |module_name| module_name =~ /^\#.*/ }
+
+modules_list.each do |module_name|
+  require_asset module_name.to_s
+end
+%>

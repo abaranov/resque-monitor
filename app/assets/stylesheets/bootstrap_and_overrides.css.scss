@@ -1,0 +1,119 @@
+html,
+body {
+    height: 100%;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+
+    margin: 0 auto -60px;
+}
+
+#push,
+#footer {
+    height: 75px;
+}
+#footer {
+    background-color: #f5f5f5;
+    margin-top: 13px;
+
+.corporate-logo {
+
+img {
+    width: 127px;
+    padding-top: 5px;
+}
+}
+
+.clock-loader {
+    position: absolute;
+    z-index: 2000;
+}
+.clock {
+    cursor: hand;
+    cursor: pointer;
+    padding: 9px 0;
+    float: left;
+    margin-right: 15px;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(200, 200, 200);
+&.selected {
+     color: rgb(119, 119, 119);
+     font-weight: bold;
+     cursor: default;
+ }
+span.tz-designation {
+    display: table-row;
+}
+.digital {
+    margin: 5px;
+}
+}
+}
+
+@media (max-width: 767px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+#wrap > .container, .container-fluid {
+    padding-top: 60px;
+}
+
+// Boostrap 3 buttons
+.btn-sm, .btn-xs {
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.btn-xs {
+  padding: 3px 5px;
+}
+
+/* Workaround for Bootstrap 2.3.2 dropdown issue: https://github.com/twbs/bootstrap/issues/7968 */
+.dropdown-backdrop {
+  position: static;
+}
+
+.dropdown-menu {
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#add_film_dialog {
+  top: 30%;
+  left: 45%;
+  width: 640px;
+
+  .form-horizontal .input-append {
+    display: block;
+    margin-bottom: 0px;
+    vertical-align: middle;
+  }
+
+  .form-horizontal input {
+    width: 335px;
+  }
+}

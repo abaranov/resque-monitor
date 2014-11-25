@@ -1,0 +1,31 @@
+<%
+modules_list = <<-MODULES_LIST
+# UI Core
+jquery.ui.core
+# jquery.ui.theme
+#
+# Interactions
+# jquery.ui.resizable
+# jquery.ui.resizable
+#
+# Widgets
+# jquery.ui.accordion
+# jquery.ui.autocomplete
+# jquery.ui.button
+# jquery.ui.datepicker
+# jquery.ui.dialog
+# jquery.ui.menu
+# jquery.ui.progressbar
+# jquery.ui.slider
+# jquery.ui.spinner
+# jquery.ui.tabs
+# jquery.ui.tooltip
+MODULES_LIST
+.split("\n")
+
+modules_list.reject! { |module_name| module_name =~ /^\#.*/ }
+
+modules_list.each do |module_name|
+  require_asset module_name.to_s
+end
+%>
