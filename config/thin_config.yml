@@ -1,0 +1,12 @@
+---
+chdir: /home/oiv/Projects/resque-monitor
+socket: /tmp/resque_monitor_development_thin.sock
+log: /home/oiv/Projects/resque-monitor/log/resque_monitor_development_thin.log
+pid: /home/oiv/Projects/resque-monitor/tmp/pids/resque_monitor_development_thin.pid
+environment: development
+daemonize: true
+servers: 1
+threaded: false
+no-epoll: false
+prefix: /monitors/show_apis
+rackup: /home/oiv/Projects/resque-monitor/config.ru

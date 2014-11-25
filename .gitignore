@@ -18,16 +18,5 @@
 /*.sublime-*
 .ruby-version
 
-# Ignore test coverage files
-/coverage
-
-# Ignore graph images from CaptureCharts
-/public/mobile
-/public/widgets
-
 # Ignore config files
-config/tenant_config.yml
-
-# Ignore mac files
-.DS_STORE
-/tmux*
+config/app_config.yml

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'monitors#show_apis'
+  # root 'monitors#show_apis'
 
   get 'monitors/show_collectors' => 'monitors#show_collectors'
   get 'monitors/show_apis' => 'monitors#show_apis'

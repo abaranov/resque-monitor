@@ -1,0 +1,4 @@
+resque_login: ''
+resque_password: ''
+api_hosts: ['', '']
+collector_hosts: ['', '']

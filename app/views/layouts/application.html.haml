@@ -22,10 +22,10 @@
               %span.icon-bar
               %span.icon-bar
               %span.icon-bar
-            = link_to 'Resque Monitor', root_path, class: 'brand'
+            = link_to 'Resque Monitor', monitors_show_apis_path, class: 'brand'
             .container.nav-collapse
               %ul.nav
-                %li.menu= link_to "API's", root_path, role: 'button'
+                %li.menu= link_to "API's", monitors_show_apis_path, role: 'button'
                 %li.menu= link_to 'Collectors', monitors_show_collectors_path, role: 'button'
                 -#%li.dropdown
                 -#  = link_to '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', role: 'button' do
