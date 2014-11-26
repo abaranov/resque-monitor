@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'monitors#show_apis'
 
-  get 'monitors/show_collectors' => 'monitors#show_collectors'
-  get 'monitors/show_apis' => 'monitors#show_apis'
+  get 'show_collectors' => 'monitors#show_collectors', as: :monitors_show_collectors
+  get 'show_apis' => 'monitors#show_apis', as: :monitors_show_apis
   get 'monitors/index' => 'monitors#index'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
